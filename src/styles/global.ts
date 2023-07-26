@@ -8,10 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     :focus {
         outline: 0;
-        box-shadow: 0 0 0 2px ${(props) => props.theme['gray-500']};
+        box-shadow: 0 0 0 2px ${(props) => props.theme.green};
     }
     body {
-        background: ${(props) => props.theme['white-100']};
+        background: #E9E9E9;
         color: ${(props) => props.theme.black};
         -webkit-font-smoothing: antialiased;
     }
