@@ -15,7 +15,7 @@ import {
   TabOption,
   SignContent,
   SignOption,
-  Separator,
+  SeparatorRoot,
 } from './styles'
 
 export function Header() {
@@ -49,13 +49,20 @@ export function Header() {
               <ShoppingCart size={22} />
               Carrinho
             </SignOption>
-            <Separator>|</Separator>
+
+            <SeparatorRoot
+              className="SeparatorRoot"
+              decorative
+              orientation="vertical"
+              style={{ margin: '0 15px', height: 20 }}
+            />
             <SignOption>
               <User size={22} />
               Entrar
             </SignOption>
           </SignContent>
         </Content>
+        <SeparatorRoot decorative orientation="horizontal" />
       </HeaderTop>
     </Container>
   )

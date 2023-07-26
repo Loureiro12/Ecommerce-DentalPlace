@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import * as Separator from '@radix-ui/react-separator'
+
 interface buttonTabProps {
   isActive: boolean
 }
@@ -18,9 +20,7 @@ export const Content = styled.div`
   align-items: center;
 `
 
-export const HeaderTop = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme['gray-200']};
-`
+export const HeaderTop = styled.div``
 
 export const TabsContent = styled.div`
   display: flex;
@@ -77,9 +77,15 @@ export const SignOption = styled.button`
   }
 `
 
-export const Separator = styled.p`
-  font-size: 1.375rem;
-  font-style: normal;
-  font-weight: 400;
-  color: ${(props) => props.theme.black};
+export const SeparatorRoot = styled(Separator.Root)`
+  background: ${(props) => props.theme['gray-200']};
+
+  &[data-orientation='horizontal'] {
+    height: 1px;
+    width: 100%;
+  }
+  &[data-orientation='vertical'] {
+    height: 100%;
+    width: 1px;
+  }
 `
