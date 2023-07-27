@@ -1,7 +1,10 @@
 import { useState } from 'react'
 
+import LogoFull from '../../assets/logo_Full.svg'
+
 import {
   BookOpen,
+  ShoppingBag,
   ShoppingCart,
   Stethoscope,
   User,
@@ -16,6 +19,9 @@ import {
   SignContent,
   SignOption,
   SeparatorRoot,
+  FooterHeader,
+  ImageLogo,
+  OfferButton,
 } from './styles'
 
 export function Header() {
@@ -64,6 +70,12 @@ export function Header() {
         </Content>
         <SeparatorRoot decorative orientation="horizontal" />
       </HeaderTop>
+      <FooterHeader>
+        <Content>
+          <ImageLogo src={LogoFull} />
+          <OfferButton label="Ofertas" icon={<ShoppingBag />} />
+        </Content>
+      </FooterHeader>
     </Container>
   )
 }

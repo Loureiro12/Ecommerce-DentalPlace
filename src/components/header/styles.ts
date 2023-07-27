@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import * as Separator from '@radix-ui/react-separator'
+import { Button } from '../button'
 
 interface buttonTabProps {
   isActive: boolean
@@ -55,6 +56,7 @@ export const SignContent = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 5px 5px 1.25rem 5px;
 `
 
 export const SignOption = styled.button`
@@ -88,4 +90,25 @@ export const SeparatorRoot = styled(Separator.Root)`
     height: 100%;
     width: 1px;
   }
+`
+
+export const FooterHeader = styled.div`
+  margin-top: 30px;
+`
+
+export const ImageLogo = styled.img`
+  width: 11.4375rem;
+  height: 1.52875rem;
+`
+
+export const OfferButton = styled(Button)`
+  border: 0;
+  padding: 10px;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  background-color: ${(props) => props.theme.blue};
+  color: ${(props) => props.theme.white};
 `
