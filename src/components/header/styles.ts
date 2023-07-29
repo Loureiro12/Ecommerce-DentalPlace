@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 import * as Separator from '@radix-ui/react-separator'
+import * as Menubar from '@radix-ui/react-menubar'
+
 import { Button } from '../button'
 
 interface buttonTabProps {
@@ -111,4 +113,110 @@ export const OfferButton = styled(Button)`
 
   background-color: ${(props) => props.theme.blue};
   color: ${(props) => props.theme.white};
+`
+
+export const MenubarRoot = styled(Menubar.Root)`
+  display: flex;
+  background-color: transparent;
+  padding: 3px;
+  border-radius: 6px;
+`
+
+export const MenubarTrigger = styled(Menubar.Trigger)`
+  padding: 8px 12px;
+  outline: none;
+  user-select: none;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 4px;
+  color: ${(props) => props.theme.black};
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  &[data-state='open'] [data-highlighted] {
+    background-color: ${(props) => props.theme.blue};
+  }
+`
+
+export const MenubarContent = styled(Menubar.Content)`
+  min-width: 220px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 10px;
+  box-shadow:
+    0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+`
+
+export const MenubarItem = styled(Menubar.Item)`
+  all: unset;
+  font-size: 16px;
+  line-height: 1;
+  color: ${(props) => props.theme.blue};
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 5px 10px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  &[data-highlighted] {
+    background-image: linear-gradient(135deg, #1e2144 0%, #1e2144 100%);
+    color: ${(props) => props.theme.white};
+  }
+`
+
+export const MenubarSubTrigger = styled(Menubar.SubTrigger)`
+  all: unset;
+  font-size: 16px;
+  line-height: 1;
+  color: ${(props) => props.theme.blue};
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  padding: 5px 10px;
+  position: relative;
+  user-select: none;
+
+  &[data-state='open'] {
+    background-color: ${(props) => props.theme['green-100']};
+    color: ${(props) => props.theme.blue};
+  }
+
+  &[data-highlighted] {
+    background-image: linear-gradient(135deg, #1e2144 0%, #1e2144 100%);
+    color: ${(props) => props.theme.white};
+  }
+`
+
+export const MenubarSubContent = styled(Menubar.SubContent)`
+  min-width: 220px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow:
+    0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+    0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  animation-duration: 400ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+`
+
+export const RightSlot = styled.div`
+  margin-left: auto;
+  padding-left: 20px;
+  color: ${(props) => props.theme['gray-500']};
 `
