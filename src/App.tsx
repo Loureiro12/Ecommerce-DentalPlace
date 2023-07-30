@@ -4,12 +4,14 @@ import { defaultTheme } from './styles/themes/default'
 import { GlobalStyle } from './styles/global'
 
 import { Header } from './components/header'
+import { Footer } from './components/footer'
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <Header />
+      <Footer />
     </ThemeProvider>
   )
 }
