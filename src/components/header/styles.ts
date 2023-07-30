@@ -3,8 +3,6 @@ import styled from 'styled-components'
 import * as Separator from '@radix-ui/react-separator'
 import * as Menubar from '@radix-ui/react-menubar'
 
-import { Button } from '../button'
-
 interface buttonTabProps {
   isActive: boolean
 }
@@ -99,20 +97,8 @@ export const FooterHeader = styled.div`
 `
 
 export const ImageLogo = styled.img`
-  width: 11.4375rem;
+  width: 11.1375rem;
   height: 1.52875rem;
-`
-
-export const OfferButton = styled(Button)`
-  border: 0;
-  padding: 10px;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-
-  background-color: ${(props) => props.theme.blue};
-  color: ${(props) => props.theme.white};
 `
 
 export const MenubarRoot = styled(Menubar.Root)`

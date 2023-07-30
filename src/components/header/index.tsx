@@ -2,13 +2,12 @@ import { useState } from 'react'
 
 import * as Menubar from '@radix-ui/react-menubar'
 
-import LogoFull from '../../assets/logo_Full.svg'
+import LogoFull from '../../assets/Logo_Full.svg'
 
 import {
   BookOpen,
   CaretRight,
   CirclesFour,
-  ShoppingBag,
   ShoppingCart,
   Stethoscope,
   User,
@@ -25,7 +24,6 @@ import {
   SeparatorRoot,
   FooterHeader,
   ImageLogo,
-  OfferButton,
   MenubarRoot,
   MenubarTrigger,
   MenubarContent,
@@ -34,6 +32,7 @@ import {
   MenubarSubContent,
   RightSlot,
 } from './styles'
+import { SearchForm } from '../searchForm'
 
 export function Header() {
   const [isTabActive, setIsTabActive] = useState('tab1' || 'tab2')
@@ -82,7 +81,8 @@ export function Header() {
       </HeaderTop>
       <FooterHeader>
         <Content>
-          <ImageLogo src={LogoFull} />
+          <ImageLogo src={LogoFull} alt="Dental Place" />
+          <SearchForm />
           <MenubarRoot>
             <Menubar.Menu>
               <MenubarTrigger>
@@ -115,7 +115,6 @@ export function Header() {
               </Menubar.Portal>
             </Menubar.Menu>
           </MenubarRoot>
-          <OfferButton label="Ofertas" icon={<ShoppingBag />} />
         </Content>
       </FooterHeader>
     </Container>
