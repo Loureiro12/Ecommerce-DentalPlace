@@ -21,16 +21,18 @@ export function Footer() {
       <Container>
         <Content>
           <ContainerSocialNetwork>
-            <h2>Redes sociais</h2>
-            <ContentSocialNetwork>
-              <Circle>
-                <InstagramLogo weight="bold" />
-              </Circle>
+            <div>
+              <h2>Redes sociais</h2>
+              <ContentSocialNetwork>
+                <Circle>
+                  <InstagramLogo weight="bold" />
+                </Circle>
 
-              <Circle>
-                <FacebookLogo weight="bold" />
-              </Circle>
-            </ContentSocialNetwork>
+                <Circle>
+                  <FacebookLogo weight="bold" />
+                </Circle>
+              </ContentSocialNetwork>
+            </div>
           </ContainerSocialNetwork>
 
           <ContainerOptions>

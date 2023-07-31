@@ -30,7 +30,18 @@ export const ContainerSocialNetwork = styled.div`
     font-family: Inter;
     margin-top: 10px;
 
+    @media (max-width: 452px) {
+      text-align: center;
+    }
+
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 452px) {
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 `
 
@@ -65,6 +76,10 @@ export const ContainerOptions = styled.p`
 
     margin-top: 10px;
     margin-bottom: 10px;
+
+    @media (max-width: 452px) {
+      text-align: center;
+    }
   }
 
   ul {
@@ -84,6 +99,11 @@ export const Option = styled.a`
   align-items: center;
   gap: 5px;
   display: flex;
+  text-align: center;
+
+  @media (max-width: 452px) {
+    justify-content: center;
+  }
 
   &:hover {
     opacity: 0.7;
