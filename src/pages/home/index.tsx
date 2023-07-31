@@ -1,3 +1,11 @@
+import { CardProduct } from '../../components/cardProduct'
+
+import { Container } from './styles'
+
 export function Home() {
-  return <h1>Home</h1>
+  return (
+    <Container>
+      <CardProduct productId="1234" />
+    </Container>
+  )
 }
